@@ -1,0 +1,98 @@
+! ============================
+!   AGGRESSIVE ADBLOCK MODE
+!   SAFE LOGINS ENABLED
+! ============================
+
+! ---- GOOGLE ADS / TRACKING ----
+||doubleclick.net^
+||googlesyndication.com^
+||google-analytics.com^
+||googletagmanager.com^
+||googletagservices.com^
+||pagead2.googlesyndication.com^
+||securepubads.g.doubleclick.net^
+||adservice.google.com^
+
+! ---- META / INSTAGRAM ----
+||facebook.com^$third-party
+||facebook.net^
+||connect.facebook.net^
+||graph.facebook.com^$third-party
+||instagram.com^$third-party
+||meta.com^$third-party
+
+! ---- TIKTOK ----
+||analytics.tiktok.com^
+||log.byteoversea.com^
+||tiktokv.com^$third-party
+
+! ---- TWITTER/X ----
+||analytics.twitter.com^
+
+! ---- SNAPCHAT ----
+||snapads.com^
+||tr.snapchat.com^
+
+! ---- MICROSOFT / BING ----
+||bat.bing.com^
+||bing.com/collect^
+
+! ---- CLOUDFLARE ADS ----
+||challenges.cloudflare.com^$third-party
+@@||challenges.cloudflare.com/cdn-cgi/challenge-platform/$third-party,script,frame
+
+! ---- STREAMING ADS ----
+||sb.scorecardresearch.com^
+||moatads.com^
+
+! ====================================
+!        YOUTUBE MIDROLL BLOCKING
+! ====================================
+
+! Remove YouTube player ads
+youtube.com###player-ads
+
+! Aggressive midroll script kill
+youtube.com##+js(nano-stb, resolve, *, 0)
+youtube.com##+js(ubo-youtube-midroll-fix)
+youtube.com##+js(json-prune, playerResponse.adPlacements playerResponse.adSlots streamingData.adPlacements)
+
+! Blocks Sponsor overlays
+||youtube.com/api/stats/ads^
+||youtube.com/get_midroll_info^
+
+! ====================================
+!       LOGIN FIXES (NECHAŤ!)
+! ====================================
+
+! ---- GOOGLE LOGIN ----
+@@||accounts.google.com^
+@@||googleusercontent.com^
+@@||gstatic.com^
+@@||www.gstatic.com/recaptcha/*
+@@||www.google.com/recaptcha/*
+
+! ---- FACEBOOK / META LOGIN ----
+@@||facebook.com/login.php
+@@||facebook.com/dialog/oauth
+@@||staticxx.facebook.com^
+
+! ---- INSTAGRAM LOGIN ----
+@@||instagram.com/accounts/login/*
+
+! ---- APPLE LOGIN ----
+@@||appleid.apple.com^
+@@||appleid.cdn-apple.com^
+
+! ---- DISCORD LOGIN ----
+@@||discord.com/api/oauth2/*
+
+! ---- X / TWITTER LOGIN ----
+@@||twitter.com/i/oauth*
+@@||x.com/i/oauth*
+
+! ---- CLOUDFLARE FIX ----
+@@||challenges.cloudflare.com/cdn-cgi/challenge-platform/*
+
+! ---- RECAPTCHA FIX ----
+@@||www.google.com/recaptcha/*
