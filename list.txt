@@ -1,90 +1,44 @@
-! ===== CUSTOM HIGH-AGGRESSION FILTERLIST FOR VIVALDI =====
-! version: 2025-01
-! compatible with Vivaldi internal adblocker (network filters only)
+! Minimal aggressive list for Vivaldi Android (safe mode)
 
 ||doubleclick.net^
-||googleadservices.com^
 ||googlesyndication.com^
+||googleadservices.com^
 ||googletagservices.com^
-||googletagmanager.com^
-||securepubads.g.doubleclick.net^
 ||pagead2.googlesyndication.com^
 ||tpc.googlesyndication.com^
 
-! --- Social / Meta ---
+||facebook.com^
+||facebook.net^
+||fbcdn.net^
+||instagram.com^
 
-||facebook.com^$third-party
-||facebook.net^$third-party
-||fbcdn.net^$third-party
-||instagram.com^$third-party
-||meta.com^$third-party
-||oculus.com^$third-party
-
-! --- TikTok ---
-
-||tiktok.com^$third-party
-||ttwstatic.com^
+||tiktok.com^
 ||tiktokcdn.com^
 
-! --- Twitter / X ---
+||twitter.com^
+||x.com^
 
-||twitter.com^$third-party
-||x.com^$third-party
-||t.co^
-
-! --- LinkedIn ---
-
-||linkedin.com^$third-party
+||linkedin.com^
 ||licdn.com^
-
-! --- Microsoft tracking ---
-
-||bing.com^$third-party
-||clarity.ms^
-
-! --- Amazon tracking ---
 
 ||amazon-adsystem.com^
 ||aaxads.com^
 
-! --- Mobile Advertising ---
-
-||appsflyer.com^
-||adjust.com^
-||branch.io^
-||braze.com^
-
-! --- Programmatic ads ---
-
-||taboola.com^
-||outbrain.com^
 ||criteo.com^
 ||adnxs.com^
 ||adsrvr.org^
-||rubiconproject.com^
 
-! --- Streaming ads (YouTube, Twitch, web players) ---
+||taboola.com^
+||outbrain.com^
 
-||youtube.com/api/stats/ads^
-||youtube.com/get_midroll_info^
-||youtube.com/api/ads^
-||youtube.com/yva_video^
-||youtube.com/pagead/^
-||googlevideo.com/videoplayback?*&oad^
-||googlevideo.com/videoplayback?*&ctier=L
-
-! --- Spotify ads ---
-
-||audio4.spotify.com^
-||adeventtracker.spotify.com^
-
-! --- Misc Tracking ---
-
-||analytics.yahoo.com^
-||geo.yahoo.com^
-||quantserve.com^
 ||scorecardresearch.com^
+||quantserve.com^
+
 ||hotjar.com^
 ||mixpanel.com^
 
-! END
+||appsflyer.com^
+||adjust.com^
+||braze.com^
+
+||spotify.com/ads^
