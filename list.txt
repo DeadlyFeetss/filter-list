@@ -1,98 +1,90 @@
-! ============================
-!   AGGRESSIVE ADBLOCK MODE
-!   SAFE LOGINS ENABLED
-! ============================
+! ===== CUSTOM HIGH-AGGRESSION FILTERLIST FOR VIVALDI =====
+! version: 2025-01
+! compatible with Vivaldi internal adblocker (network filters only)
 
-! ---- GOOGLE ADS / TRACKING ----
 ||doubleclick.net^
+||googleadservices.com^
 ||googlesyndication.com^
-||google-analytics.com^
-||googletagmanager.com^
 ||googletagservices.com^
-||pagead2.googlesyndication.com^
+||googletagmanager.com^
 ||securepubads.g.doubleclick.net^
-||adservice.google.com^
+||pagead2.googlesyndication.com^
+||tpc.googlesyndication.com^
 
-! ---- META / INSTAGRAM ----
+! --- Social / Meta ---
+
 ||facebook.com^$third-party
-||facebook.net^
-||connect.facebook.net^
-||graph.facebook.com^$third-party
+||facebook.net^$third-party
+||fbcdn.net^$third-party
 ||instagram.com^$third-party
 ||meta.com^$third-party
+||oculus.com^$third-party
 
-! ---- TIKTOK ----
-||analytics.tiktok.com^
-||log.byteoversea.com^
-||tiktokv.com^$third-party
+! --- TikTok ---
 
-! ---- TWITTER/X ----
-||analytics.twitter.com^
+||tiktok.com^$third-party
+||ttwstatic.com^
+||tiktokcdn.com^
 
-! ---- SNAPCHAT ----
-||snapads.com^
-||tr.snapchat.com^
+! --- Twitter / X ---
 
-! ---- MICROSOFT / BING ----
-||bat.bing.com^
-||bing.com/collect^
+||twitter.com^$third-party
+||x.com^$third-party
+||t.co^
 
-! ---- CLOUDFLARE ADS ----
-||challenges.cloudflare.com^$third-party
-@@||challenges.cloudflare.com/cdn-cgi/challenge-platform/$third-party,script,frame
+! --- LinkedIn ---
 
-! ---- STREAMING ADS ----
-||sb.scorecardresearch.com^
-||moatads.com^
+||linkedin.com^$third-party
+||licdn.com^
 
-! ====================================
-!        YOUTUBE MIDROLL BLOCKING
-! ====================================
+! --- Microsoft tracking ---
 
-! Remove YouTube player ads
-youtube.com###player-ads
+||bing.com^$third-party
+||clarity.ms^
 
-! Aggressive midroll script kill
-youtube.com##+js(nano-stb, resolve, *, 0)
-youtube.com##+js(ubo-youtube-midroll-fix)
-youtube.com##+js(json-prune, playerResponse.adPlacements playerResponse.adSlots streamingData.adPlacements)
+! --- Amazon tracking ---
 
-! Blocks Sponsor overlays
+||amazon-adsystem.com^
+||aaxads.com^
+
+! --- Mobile Advertising ---
+
+||appsflyer.com^
+||adjust.com^
+||branch.io^
+||braze.com^
+
+! --- Programmatic ads ---
+
+||taboola.com^
+||outbrain.com^
+||criteo.com^
+||adnxs.com^
+||adsrvr.org^
+||rubiconproject.com^
+
+! --- Streaming ads (YouTube, Twitch, web players) ---
+
 ||youtube.com/api/stats/ads^
 ||youtube.com/get_midroll_info^
+||youtube.com/api/ads^
+||youtube.com/yva_video^
+||youtube.com/pagead/^
+||googlevideo.com/videoplayback?*&oad^
+||googlevideo.com/videoplayback?*&ctier=L
 
-! ====================================
-!       LOGIN FIXES (NECHAŤ!)
-! ====================================
+! --- Spotify ads ---
 
-! ---- GOOGLE LOGIN ----
-@@||accounts.google.com^
-@@||googleusercontent.com^
-@@||gstatic.com^
-@@||www.gstatic.com/recaptcha/*
-@@||www.google.com/recaptcha/*
+||audio4.spotify.com^
+||adeventtracker.spotify.com^
 
-! ---- FACEBOOK / META LOGIN ----
-@@||facebook.com/login.php
-@@||facebook.com/dialog/oauth
-@@||staticxx.facebook.com^
+! --- Misc Tracking ---
 
-! ---- INSTAGRAM LOGIN ----
-@@||instagram.com/accounts/login/*
+||analytics.yahoo.com^
+||geo.yahoo.com^
+||quantserve.com^
+||scorecardresearch.com^
+||hotjar.com^
+||mixpanel.com^
 
-! ---- APPLE LOGIN ----
-@@||appleid.apple.com^
-@@||appleid.cdn-apple.com^
-
-! ---- DISCORD LOGIN ----
-@@||discord.com/api/oauth2/*
-
-! ---- X / TWITTER LOGIN ----
-@@||twitter.com/i/oauth*
-@@||x.com/i/oauth*
-
-! ---- CLOUDFLARE FIX ----
-@@||challenges.cloudflare.com/cdn-cgi/challenge-platform/*
-
-! ---- RECAPTCHA FIX ----
-@@||www.google.com/recaptcha/*
+! END
